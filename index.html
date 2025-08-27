@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zainab Fatema Muquddar Ali - Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'urban-dark': '#22223B',
+                        'urban-slate': '#4A4E69',
+                        'urban-rose': '#C9ADA7',
+                        'urban-cream': '#F2E9E4'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #22223B 0%, #4A4E69 100%); }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(34, 34, 59, 0.2); }
+        .skill-bar { transition: width 1.5s ease-in-out; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .typing-animation { 
+            border-right: 2px solid #C9ADA7; 
+            animation: blink 1s infinite; 
+        }
+        @keyframes blink { 0%, 50% { border-color: transparent; } 51%, 100% { border-color: #C9ADA7; } }
+    </style>
+</head>
+<body class="bg-urban-cream">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-urban-cream/95 backdrop-blur-sm z-50 shadow-lg border-b border-urban-rose/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-urban-dark">Zainab Fatema
+
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-urban-slate hover:text-urban-dark transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-urban-slate hover:text-urban-dark transition-colors font-medium">About</a>
+                    <a href="#experience" class="text-urban-slate hover:text-urban-dark transition-colors font-medium">Experience</a>
+                    <a href="#projects" class="text-urban-slate hover:text-urban-dark transition-colors font-medium">Projects</a>
+                    <a href="#skills" class="text-urban-slate hover:text-urban-dark transition-colors font-medium">Skills</a>
+                    <a href="#contact" class="text-urban-slate hover:text-urban-dark transition-colors font-medium">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-urban-slate">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-urban-cream border-t border-urban-rose/30">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-urban-slate hover:text-urban-dark">Home</a>
+                <a href="#about" class="block py-2 text-urban-slate hover:text-urban-dark">About</a>
+                <a href="#experience" class="block py-2 text-urban-slate hover:text-urban-dark">Experience</a>
+                <a href="#projects" class="block py-2 text-urban-slate hover:text-urban-dark">Projects</a>
+                <a href="#skills" class="block py-2 text-urban-slate hover:text-urban-dark">Skills</a>
+                <a href="#contact" class="block py-2 text-urban-slate hover:text-urban-dark">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
+        <div class="text-center px-4 max-w-4xl mx-auto">
+            <div class="w-40 h-40 mx-auto mb-8 rounded-full bg-urban-rose/20 flex items-center justify-center text-7xl border-4 border-urban-rose/30">
+                👩‍💻
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-in">Zainab Fatema</h1>
+            <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-urban-rose fade-in">Muquddar Ali</h2>
+            <div class="text-xl md:text-2xl mb-8 text-white/90 fade-in">
+                <span id="typing-text" class="typing-animation">Full Stack Developer</span>
+            </div>
+            <p class="text-lg mb-12 text-white/80 max-w-3xl mx-auto fade-in">
+                MCA student passionate about cloud technologies and full-stack development. 
+                Experienced in MERN stack, AWS cloud services, and building scalable web applications.
+            </p>
+            <div class="space-x-4 fade-in">
+                <a href="#projects" class="bg-urban-rose text-urban-dark px-8 py-3 rounded-full font-semibold hover:bg-urban-rose/90 transition-colors">
+                    View My Work
+                </a>
+                <a href="#contact" class="border-2 border-urban-rose text-urban-rose px-8 py-3 rounded-full font-semibold hover:bg-urban-rose hover:text-urban-dark transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-urban-dark mb-4 fade-in">About Me</h2>
+                <p class="text-xl text-urban-slate max-w-3xl mx-auto fade-in">
+                    Motivated MCA student seeking challenging opportunities to apply technical knowledge, 
+                    enhance skills, and contribute to organizational goals while continuously growing in my career.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-urban-rose to-urban-slate rounded-2xl flex items-center justify-center text-9xl shadow-2xl">
+                        🎓
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-3xl font-semibold text-urban-dark mb-6">My Journey</h3>
+                    <p class="text-urban-slate mb-6 text-lg leading-relaxed">
+                        Currently pursuing MCA with a strong foundation in computer science. I specialize in 
+                        full-stack development using MERN stack and have hands-on experience with AWS cloud services. 
+                        My passion lies in creating innovative solutions that make a real impact.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center bg-urban-cream p-4 rounded-lg">
+                            <span class="text-3xl mr-4">🎯</span>
+                            <div>
+                                <span class="text-urban-dark font-semibold">Current SGPA:</span>
+                                <span class="text-urban-slate ml-2">8.01/10</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-urban-cream p-4 rounded-lg">
+                            <span class="text-3xl mr-4">☁️</span>
+                            <div>
+                                <span class="text-urban-dark font-semibold">AWS Cloud Intern</span>
+                                <span class="text-urban-slate ml-2">@ EDUSKILL</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-urban-cream p-4 rounded-lg">
+                            <span class="text-3xl mr-4">🚀</span>
+                            <div>
+                                <span class="text-urban-dark font-semibold">8+ Projects</span>
+                                <span class="text-urban-slate ml-2">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-urban-cream">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-urban-dark mb-4 fade-in">Experience & Education</h2>
+                <p class="text-xl text-urban-slate fade-in">My academic journey and professional experience</p>
+            </div>
+            
+            <!-- Experience -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-urban-dark mb-8 fade-in">Work Experience</h3>
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover fade-in border-l-4 border-urban-rose">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h4 class="text-xl font-semibold text-urban-dark">AWS Cloud Management Intern</h4>
+                            <p class="text-urban-rose font-medium">EDUSKILL (Virtual)</p>
+                        </div>
+                        <span class="text-urban-slate bg-urban-cream px-4 py-2 rounded-full text-sm font-medium mt-2 md:mt-0">Nov 2024 – Present</span>
+                    </div>
+                    <ul class="text-urban-slate space-y-2">
+                        <li class="flex items-start"><span class="text-urban-rose mr-2">•</span>Gaining hands-on experience in AWS cloud infrastructure, deployment, and management</li>
+                        <li class="flex items-start"><span class="text-urban-rose mr-2">•</span>Practicing cloud resource monitoring, security, and automation techniques</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <h3 class="text-2xl font-semibold text-urban-dark mb-8 fade-in">Education</h3>
+                <div class="space-y-6">
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover fade-in">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                            <h4 class="text-lg font-semibold text-urban-dark">Master of Computer Applications (MCA)</h4>
+                            <span class="text-urban-slate bg-urban-cream px-3 py-1 rounded-full text-sm">2024 – 2026</span>
+                        </div>
+                        <p class="text-urban-slate mb-2">P. R. Pote Group Of Educational Institutions</p>
+                        <p class="text-urban-rose font-medium">Current SGPA: 8.01/10 (Semester 1)</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover fade-in">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                            <h4 class="text-lg font-semibold text-urban-dark">Bachelor of Science (B.Sc) - Computer Science</h4>
+                            <span class="text-urban-slate bg-urban-cream px-3 py-1 rounded-full text-sm">2021 – 2024</span>
+                        </div>
+                        <p class="text-urban-slate mb-2">Jagdamba Mahavidyalaya Achalpur</p>
+                        <p class="text-urban-rose font-medium">Percentage: 69.44%</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover fade-in">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                            <h4 class="text-lg font-semibold text-urban-dark">Senior Secondary (XII) - Maharashtra State Board</h4>
+                            <span class="text-urban-slate bg-urban-cream px-3 py-1 rounded-full text-sm">2021</span>
+                        </div>
+                        <p class="text-urban-slate mb-2">Smt. Ushabai Deshmukh Jr College Achalpur</p>
+                        <p class="text-urban-rose font-medium">Percentage: 89.50%</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 card-hover fade-in">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                            <h4 class="text-lg font-semibold text-urban-dark">Secondary (X) - Maharashtra State Board</h4>
+                            <span class="text-urban-slate bg-urban-cream px-3 py-1 rounded-full text-sm">2019</span>
+                        </div>
+                        <p class="text-urban-slate mb-2">Smt. Jankibai Deshmukh Girls High School Achalpur</p>
+                        <p class="text-urban-rose font-medium">Percentage: 82.20%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-urban-dark mb-4 fade-in">Featured Projects</h2>
+                <p class="text-xl text-urban-slate fade-in">Some of my recent work showcasing technical expertise</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-urban-cream rounded-xl shadow-lg overflow-hidden card-hover fade-in border-2 border-urban-rose/20">
+                    <div class="h-48 bg-gradient-to-br from-urban-slate to-urban-dark flex items-center justify-center text-6xl">
+                        🏥
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-urban-dark mb-2">One Touch Move</h3>
+                        <p class="text-urban-slate mb-4">Rural healthcare accessibility platform with online psychotherapy booking and secure backend.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-urban-rose/20 text-urban-dark rounded-full text-sm font-medium">MERN</span>
+                            <span class="px-3 py-1 bg-urban-rose/20 text-urban-dark rounded-full text-sm font-medium">Tailwind</span>
+                            <span class="px-3 py-1 bg-urban-rose/20 text-urban-dark rounded-full text-sm font-medium">Firebase</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="text-urban-slate hover:text-urban-dark font-medium">Live Demo</button>
+                            <button class="text-urban-rose hover:text-urban-dark font-medium">GitHub</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-urban-cream rounded-xl shadow-lg overflow-hidden card-hover fade-in border-2 border-urban-rose/20">
+                    <div class="h-48 bg-gradient-to-br from-urban-rose to-urban-slate flex items-center justify-center text-6xl">
+                        🚌
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-urban-dark mb-2">Bus Reservation System</h3>
+                        <p class="text-urban-slate mb-4">Full-featured booking system with seat selection, cancellations, and PDF ticketing.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-urban-rose/20 text-urban-dark rounded-full text-sm font-medium">MERN</span>
+                            <span class="px-3 py-1 bg-urban-rose/20 text-urban-dark rounded-full text-sm font-medium">Python</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="text-urban-slate hover:text-urban-dark font-medium">Live Demo</button>
+                            <button class="text-urban-rose hover:text-urban-dark font-medium">GitHub</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-urban-cream rounded-xl shadow-lg overflow-hidden card-hover fade-in border-2 border-urban-rose/20">
+                    <div class="h-48 bg-gradient-to-br from-urban-dark to-urban-rose flex items-center justify-center text-6xl">
+                        🎉
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-urban-dark mb-2">Event Management System</h3>
+                        <p class="text-urban-slate mb-4">Comprehensive event scheduling and registration platform with admin dashboard.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-urban-rose/20 text-urban-dark rounded-full text-sm font-medium">MERN</span>
+                            <span class="px-3 py-1 bg-urban-rose/20 text-urban-dark rounded-full text-sm font-medium">React</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="text-urban-slate hover:text-urban-dark font-medium">Live Demo</button>
+                            <button class="text-urban-rose hover:text-urban-dark font-medium">GitHub</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-urban-cream">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-urban-dark mb-4 fade-in">Technical Skills</h2>
+                <p class="text-xl text-urban-slate fade-in">Technologies and tools I work with</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold text-urban-dark mb-6">Programming Languages</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-urban-slate font-medium">JavaScript/Node.js</span>
+                                <span class="text-urban-rose">90%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="skill-bar bg-urban-slate h-3 rounded-full" style="width: 0%" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-urban-slate font-medium">Java</span>
+                                <span class="text-urban-rose">85%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="skill-bar bg-urban-rose h-3 rounded-full" style="width: 0%" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-urban-slate font-medium">Python</span>
+                                <span class="text-urban-rose">80%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="skill-bar bg-urban-dark h-3 rounded-full" style="width: 0%" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-urban-slate font-medium">C++</span>
+                                <span class="text-urban-rose">75%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="skill-bar bg-gradient-to-r from-urban-slate to-urban-rose h-3 rounded-full" style="width: 0%" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold text-urban-dark mb-6">Web Technologies & Cloud</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-urban-slate font-medium">React/MERN Stack</span>
+                                <span class="text-urban-rose">88%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="skill-bar bg-urban-slate h-3 rounded-full" style="width: 0%" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-urban-slate font-medium">AWS Cloud Services</span>
+                                <span class="text-urban-rose">82%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="skill-bar bg-urban-rose h-3 rounded-full" style="width: 0%" data-width="82%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-urban-slate font-medium">MongoDB/MySQL</span>
+                                <span class="text-urban-rose">85%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="skill-bar bg-urban-dark h-3 rounded-full" style="width: 0%" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-urban-slate font-medium">HTML/CSS/Bootstrap</span>
+                                <span class="text-urban-rose">92%</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-3">
+                                <div class="skill-bar bg-gradient-to-r from-urban-slate to-urban-rose h-3 rounded-full" style="width: 0%" data-width="92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 fade-in">Let's Connect</h2>
+            <p class="text-xl mb-12 text-white/90 fade-in">
+                I'm always open to discussing new opportunities, collaborations, or just having a chat about technology!
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="fade-in">
+                    <div class="text-4xl mb-4">📧</div>
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p class="text-white/80">zainabfatema537@gmail.com</p>
+                </div>
+                <div class="fade-in">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                    <p class="text-white/80">+91 9579700771</p>
+                </div>
+                <div class="fade-in">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+                    <p class="text-white/80">zainab-fatema-muquddar-ali</p>
+                </div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 fade-in border border-urban-rose/30">
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-urban-rose/50">
+                        <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-urban-rose/50">
+                    </div>
+                    <input type="text" placeholder="Subject" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-urban-rose/50">
+                    <textarea rows="5" placeholder="Your Message" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-urban-rose/50 resize-none"></textarea>
+                    <button type="submit" class="bg-urban-rose text-urban-dark px-8 py-3 rounded-lg font-semibold hover:bg-urban-rose/90 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-urban-dark text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-urban-rose">© 2024 Zainab Fatema Muquddar Ali. Crafted with passion and dedication 💜</p>
+            <p class="text-white/60 mt-2">Amravati, Maharashtra | Available for opportunities</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Typing animation
+        const typingText = document.getElementById('typing-text');
+        const roles = ['Full Stack Developer', 'MCA Student', 'AWS Cloud Enthusiast', 'MERN Stack Developer'];
+        let currentRole = 0;
+        let currentChar = 0;
+        let isDeleting = false;
+
+        function typeAnimation() {
+            const current = roles[currentRole];
+            
+            if (isDeleting) {
+                typingText.textContent = current.substring(0, currentChar - 1);
+                currentChar--;
+            } else {
+                typingText.textContent = current.substring(0, currentChar + 1);
+                currentChar++;
+            }
+
+            if (!isDeleting && currentChar === current.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && currentChar === 0) {
+                isDeleting = false;
+                currentRole = (currentRole + 1) % roles.length;
+            }
+
+            setTimeout(typeAnimation, isDeleting ? 50 : 100);
+        }
+
+        typeAnimation();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animate skill bars when they come into view
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach((bar, index) => {
+                        const width = bar.getAttribute('data-width');
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, index * 200);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+            skillObserver.observe(skillsSection);
+        }
+
+        // Contact form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = this.querySelector('input[placeholder="Your Name"]').value;
+            const email = this.querySelector('input[placeholder="Your Email"]').value;
+            const subject = this.querySelector('input[placeholder="Subject"]').value;
+            const message = this.querySelector('textarea').value;
+            
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+            
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            this.reset();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'975a0fb1703a3fc6',t:'MTc1NjI4MTkwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
